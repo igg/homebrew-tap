@@ -18,9 +18,11 @@ class Ext2fuse < Formula
   end
 
   fails_with :clang do
+  # What is this number supposed to mean?
+  # This is the one used in the Formula Cookbook
   build 2335
   cause <<-EOS.undent
-    Sorry - this formula is not compatible with the clang compiler.
+    This formula is not compatible with the clang compiler due to a multitude of symbol conflicts.
     It is known to work with llvm.
     EOS
   end
